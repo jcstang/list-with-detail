@@ -58,23 +58,33 @@ struct ContentView: View {
 //        }
 //        .navigationBarTitle("Reptiles")
         
-        // testing
-        NavigationView {
-          List(repList) { rep in
-            NavigationLink(destination: DetailsView(theReptile: rep)) {
-            HStack {
-                ReptileCircleView(Reptile: rep)
-                Text(rep.name).font(.headline)
+        VStack {
+            // testing
+            NavigationView {
+              List(repList) { rep in
+                NavigationLink(destination: DetailsView(theReptile: rep)) {
+                HStack {
+                    ReptileCircleView(Reptile: rep)
+                    Text(rep.name).font(.headline)
 
-                
-            }.padding(7)
+                    
+                }.padding(7)
+                }
+              }
+              .navigationBarTitle("Reptiles")
             }
-          }
-          .navigationBarTitle("Reptiles")
-        }
-      }
-
-//    }
+            
+            List(repList) { rep in
+                HStack {
+                    ReptileCircleView(Reptile: rep)
+                    Text(rep.name).font(.headline)
+                }
+                .onTapGesture {
+                    print("stuff")
+                }
+            }
+        } //eof VStack
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
