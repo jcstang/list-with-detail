@@ -19,13 +19,13 @@ struct ReptileCircleView: View {
                     Circle().stroke(Color.purple, lineWidth: 3)
                 )
                 .clipShape(Circle())
-//            Text(Reptile.icon)
-//                .shadow(radius: 3)
-//                .font(.largeTitle)
-//                .frame(width: 65, height: 65)
-//                .overlay(
-//                    Circle().stroke(Color.purple, lineWidth: 3)
-//                )
+            //            Text(Reptile.icon)
+            //                .shadow(radius: 3)
+            //                .font(.largeTitle)
+            //                .frame(width: 65, height: 65)
+            //                .overlay(
+            //                    Circle().stroke(Color.purple, lineWidth: 3)
+            //                )
         }
     }
 }
@@ -40,6 +40,7 @@ struct Reptile: Identifiable {
 
 struct ContentView: View {
     @State private var showingSheet = false
+    @State private var sort: Int = 0
     
     private let repList: [Reptile] = [
         Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball"),
@@ -47,32 +48,37 @@ struct ContentView: View {
         Reptile(name: "Erso", icon: "default_reptile", description: "cornsnake")
     ]
     var body: some View {
-
+        
         
         VStack {
             NavigationView {
-              List(repList) { rep in
-                NavigationLink(destination: DetailsView(theReptile: rep)) {
-                HStack {
-                    ReptileCircleView(Reptile: rep)
-                    Text(rep.name).font(.headline)
-
-                    
-                }.padding(7)
+                List(repList) { rep in
+                    NavigationLink(destination: DetailsView(theReptile: rep)) {
+                        HStack {
+                            ReptileCircleView(Reptile: rep)
+                            Text(rep.name).font(.headline)
+                            
+                            
+                        }.padding(7)
+                    }
                 }
-              }
-              .navigationBarTitle("Reptiles")
+                .navigationBarTitle("Reptiles")
+                .navigationBarItems(trailing:
+                    MenuView()
+                )
+                
             }
             
-//            List(repList) { rep in
-//                HStack {
-//                    ReptileCircleView(Reptile: rep)
-//                    Text(rep.name).font(.headline)
-//                }
-//                .onTapGesture {
-//                    print("stuff")
-//                }
-//            }
+            //            List(repList) { rep in
+            //                HStack {
+            //                    ReptileCircleView(Reptile: rep)
+            //                    Text(rep.name).font(.headline)
+            //                }
+            //                .onTapGesture {
+            //                    print("stuff")
+            //                }
+            //            }
+            MenuView()
         } //eof VStack
     }
 }
