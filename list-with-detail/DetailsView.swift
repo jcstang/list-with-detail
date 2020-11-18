@@ -22,16 +22,16 @@ struct DetailsView: View {
                     .font(.largeTitle)
                     .bold()
                 
-                Button("Dismiss") {
-                    self.presentationMode.wrappedValue.dismiss()
-                }
+//                Button("Dismiss") {
+//                    self.presentationMode.wrappedValue.dismiss()
+//                }
                 
-                Button("Show details") {
-                    self.showingSheet.toggle()
-                }
-                .sheet(isPresented: $showingSheet) {
-                    DetailsView(theReptile: theReptile)
-                }
+//                Button("Show details") {
+//                    self.showingSheet.toggle()
+//                }
+//                .sheet(isPresented: $showingSheet) {
+//                    DetailsView(theReptile: theReptile)
+//                }
                 
                 Spacer()
             } // end of HStack

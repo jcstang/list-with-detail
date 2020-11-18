@@ -12,12 +12,13 @@ struct ReptileCircleView: View {
     
     var body: some View {
         ZStack {
-            Image(systemName: Reptile.icon)
+            Image(Reptile.icon)
                 .shadow(radius: 3)
-                .frame(width: 65, height: 65, alignment: .center)
+                .frame(width: 100, height: 100, alignment: .center)
                 .overlay(
                     Circle().stroke(Color.purple, lineWidth: 3)
                 )
+                .clipShape(Circle())
 //            Text(Reptile.icon)
 //                .shadow(radius: 3)
 //                .font(.largeTitle)
@@ -28,6 +29,7 @@ struct ReptileCircleView: View {
         }
     }
 }
+
 
 struct Reptile: Identifiable {
     let id = UUID()
@@ -40,26 +42,14 @@ struct ContentView: View {
     @State private var showingSheet = false
     
     private let repList: [Reptile] = [
-        Reptile(name: "gimli", icon: "bolt", description: "mojave ball"),
-        Reptile(name: "Zelda", icon: "bolt.fill", description: "hognose xanth"),
-        Reptile(name: "Erso", icon: "bolt", description: "cornsnake")
+        Reptile(name: "gimli", icon: "default_reptile", description: "mojave ball"),
+        Reptile(name: "Zelda", icon: "default_reptile", description: "hognose xanth"),
+        Reptile(name: "Erso", icon: "default_reptile", description: "cornsnake")
     ]
     var body: some View {
-//        NavigationView {
-//            List(repList) { reptile in
-//                NavigationLink(
-//                    destination: EmptyView()) {
-//                HStack {
-//                    ReptileCircleView(Reptile: reptile)
-//                    Text(reptile.name).font(.headline)
-//                }.padding(7)
-//                }
-//            }
-//        }
-//        .navigationBarTitle("Reptiles")
+
         
         VStack {
-            // testing
             NavigationView {
               List(repList) { rep in
                 NavigationLink(destination: DetailsView(theReptile: rep)) {
@@ -74,15 +64,15 @@ struct ContentView: View {
               .navigationBarTitle("Reptiles")
             }
             
-            List(repList) { rep in
-                HStack {
-                    ReptileCircleView(Reptile: rep)
-                    Text(rep.name).font(.headline)
-                }
-                .onTapGesture {
-                    print("stuff")
-                }
-            }
+//            List(repList) { rep in
+//                HStack {
+//                    ReptileCircleView(Reptile: rep)
+//                    Text(rep.name).font(.headline)
+//                }
+//                .onTapGesture {
+//                    print("stuff")
+//                }
+//            }
         } //eof VStack
     }
 }
