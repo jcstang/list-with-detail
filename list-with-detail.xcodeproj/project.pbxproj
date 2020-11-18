@@ -16,6 +16,7 @@
 		A3C697332564745100F028D5 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697322564745100F028D5 /* DetailsView.swift */; };
 		A3C697722564D7E600F028D5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697712564D7E600F028D5 /* MenuView.swift */; };
 		A3C697772564D97500F028D5 /* ReptilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697762564D97500F028D5 /* ReptilesView.swift */; };
+		A3C697842564DA6C00F028D5 /* ReptileCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C697832564DA6C00F028D5 /* ReptileCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A3C697322564745100F028D5 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		A3C697712564D7E600F028D5 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		A3C697762564D97500F028D5 /* ReptilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReptilesView.swift; sourceTree = "<group>"; };
+		A3C697832564DA6C00F028D5 /* ReptileCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReptileCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				A3C69704256469AE00F028D5 /* list_with_detailApp.swift */,
 				A3C69706256469AE00F028D5 /* ContentView.swift */,
+				A3C697832564DA6C00F028D5 /* ReptileCircleView.swift */,
 				A3C697762564D97500F028D5 /* ReptilesView.swift */,
 				A3C697712564D7E600F028D5 /* MenuView.swift */,
 				A3C697322564745100F028D5 /* DetailsView.swift */,
@@ -270,6 +273,7 @@
 			files = (
 				A3C69707256469AE00F028D5 /* ContentView.swift in Sources */,
 				A3C697772564D97500F028D5 /* ReptilesView.swift in Sources */,
+				A3C697842564DA6C00F028D5 /* ReptileCircleView.swift in Sources */,
 				A3C697722564D7E600F028D5 /* MenuView.swift in Sources */,
 				A3C69705256469AE00F028D5 /* list_with_detailApp.swift in Sources */,
 				A3C697332564745100F028D5 /* DetailsView.swift in Sources */,
